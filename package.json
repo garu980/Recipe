@@ -1,0 +1,48 @@
+{
+  "name": "recipe",
+  "version": "1.0.0",
+  "description": "own recepies",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "pm2 start src/server/server.js --watch --interpreter babel-node",
+    "start-node": "node transpiled/index.js",
+    "build": "babel ./src --out-dir dist",
+    "webpack": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garu980/Recipe.git"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "author": "Stefano Garusi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garu980/Recipe/issues"
+  },
+  "homepage": "https://github.com/garu980/Recipe#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "pm2": "^4.2.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/register": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

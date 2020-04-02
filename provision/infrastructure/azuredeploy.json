@@ -1,0 +1,149 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApplicationName": {
+      "type": "string",
+      "metadata": {
+        "description": "the name of the application"
+      }
+    },
+    "ApplicationVersion": {
+      "type": "string",
+      "metadata": {
+        "description": "the version of the application"
+      }
+    },
+    "AppServiceName": {
+      "type": "string",
+      "allowedValues": [
+        "recipe"
+      ]
+    },
+    "ServicePlanName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the service plan"
+      }
+    },
+    "ServiceplanResourceGroupName": {
+      "type": "string",
+      "metadata": {
+        "description": "the name of the resourcegroup holding the serviceplan"
+      }
+    },
+    "TagEnvironment": {
+      "type": "string",
+      "allowedValues": [
+        "test",
+        "production"
+      ]
+    },
+    "MinimumLogLevel": {
+      "type": "string",
+      "allowedValues": [
+        "Information",
+        "Verbose",
+        "Debug",
+        "Warning",
+        "Error",
+        "Fatal"
+      ]
+    },
+    "EnvironmentName": {
+      "type": "string"
+    },
+    "KeyVaultUrl": {
+      "type": "string"
+    }
+  },
+  "variables": {
+    "TagResponsible": "Stefano Garusi",
+    "SubscriptionId": "[subscription().subscriptionId]",
+    "ServerFarmId": "[resourceId(parameters('ServiceplanResourceGroupName'),'Microsoft.Web/serverfarms', parameters('ServicePlanName'))]"
+  },
+  "resources": [
+    {
+      "apiVersion": "2015-08-01",
+      "dependsOn": [],
+      "kind": "api",
+      "location": "[resourceGroup().location]",
+      "name": "[parameters('AppServiceName')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "resources": [
+        {
+          "name": "web",
+          "type": "config",
+          "apiVersion": "2015-08-01",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', parameters('AppServiceName'))]"
+          ],
+          "properties": {}
+        },
+        {
+          "name": "appsettings",
+          "type": "config",
+          "apiVersion": "2015-08-01",
+          "tags": {
+            "displayName": "appSettings"
+          },
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', parameters('AppServiceName'))]"
+          ],
+          "properties": {
+            "ApplicationName": "[parameters('ApplicationName')]",
+            "ApplicationVersion": "[parameters('ApplicationVersion')]",
+            "KeyVaultUrl": "[parameters('KeyVaultUrl')]",
+            "WEBSITE_NODE_DEFAULT_VERSION": "10.14.1"
+          }
+        }
+      ],
+      "properties": {
+        "clientAffinityEnabled": false,
+        "clientCertEnabled": false,
+        "cloningInfo": null,
+        "containerSize": 0,
+        "dailyMemoryTimeQuota": 0,
+        "enabled": true,
+        "hostingEnvironmentProfile": null,
+        "hostNamesDisabled": false,
+        "hostNameSslStates": [
+          {
+            "name": "[concat(parameters('AppServiceName'),'.azurewebsites.net')]",
+            "sslState": "Disabled",
+            "virtualIP": null,
+            "toUpdate": null,
+            "hostType": "Standard"
+          },
+          {
+            "hostType": "Repository",
+            "name": "[concat(parameters('AppServiceName'),'.scm.azurewebsites.net')]",
+            "sslState": "Disabled",
+            "toUpdate": null,
+            "virtualIP": null
+          }
+        ],
+        "reserved": false,
+        "scmSiteAlsoStopped": false,
+        "serverFarmId": "[resourceId(resourceGroup().name,'Microsoft.Web/serverfarms', parameters('ServicePlanName'))]",
+        "siteConfig": {
+          "phpVersion": "Off",
+          "httpLoggingEnabled": true,
+          "detailedErrorLogginEnabled": true,
+          "ftpsState": "Disabled",
+          "linuxFxVersion": "NODE|10.14",
+          "appCommandLine": "npm run start"
+        },
+        "httpsOnly": true
+      },
+      "scale": null,
+      "tags": {
+        "Environment": "[parameters('TagEnvironment')]",
+        "Responsible": "[variables('TagResponsible')]"
+      },
+      "type": "Microsoft.Web/sites"
+    }
+  ]
+}
