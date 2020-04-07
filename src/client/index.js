@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Recipe from './recipe/Recipe';
 
 const App = () => {
-  return <h2>Hello React</h2>;
+  return <Recipe />;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

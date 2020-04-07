@@ -4,9 +4,10 @@
   "description": "own recepies",
   "main": "src/server/server.js",
   "scripts": {
-    "start": "pm2 start src/server/server.js --watch --interpreter babel-node",
+    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "start-server": "pm2 start src/server/server.js --watch --interpreter babel-node -f",
     "start-node": "node transpiled/index.js",
-    "build": "babel ./src --out-dir dist",
+    "build-server": "babel ./src --out-dir dist && webpack --mode production",
     "webpack": "webpack --mode production"
   },
   "repository": {
@@ -43,7 +44,16 @@
     "@babel/register": "^7.9.0",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.19.0",
+    "html-webpack-plugin": "^4.0.4",
+    "jest": "^25.2.7",
+    "style-loader": "^1.1.3",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

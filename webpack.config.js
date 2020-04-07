@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/client/index.js'],
+  entry: ['babel-polyfill', './src/client/index'],
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
