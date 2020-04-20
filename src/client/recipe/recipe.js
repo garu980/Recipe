@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Recipe(props) {
-  return <h2>RECIPE HERE</h2>;
-}
+const Recipe = props => {
+  return <h2>RECIPE HERE CHANGED</h2>;
+};
 
 export default Recipe;
