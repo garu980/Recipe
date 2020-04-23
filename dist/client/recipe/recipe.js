@@ -9,9 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function Recipe(props) {
-  return /*#__PURE__*/_react["default"].createElement("h2", null, "RECIPE HERE");
-}
+var Recipe = function Recipe(props) {
+  return /*#__PURE__*/_react["default"].createElement("h2", null, "RECIPE HERE CHANGED");
+};
 
 var _default = Recipe;
 exports["default"] = _default;

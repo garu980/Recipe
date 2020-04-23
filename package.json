@@ -8,7 +8,8 @@
     "start-server": "pm2 start src/server/server.js --watch --interpreter babel-node -f",
     "start-node": "node transpiled/index.js",
     "build-server": "babel ./src --out-dir dist && webpack --mode production",
-    "webpack": "webpack --mode production"
+    "webpack": "webpack --mode production",
+    "test": "jest --config=jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,8 @@
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "css-loader": "^3.4.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^4.0.0",
     "eslint-plugin-import": "^2.20.2",

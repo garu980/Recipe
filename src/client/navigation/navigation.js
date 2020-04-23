@@ -1,4 +1,5 @@
 import React from 'react';
+import { changeLanguage } from './state/languageActions';
 import {
   Navbar,
   Nav,
@@ -9,31 +10,40 @@ import {
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useIntl } from 'react-intl';
+import { useDispatch } from 'react-redux';
 
 const Navigation = (props) => {
   const intl = useIntl();
+  const dispatch = useDispatch();
+
+  const onLanguageChange = (event, eventKey) => {
+    dispatch(changeLanguage(event));
+  };
+
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar bg="light" expand="lg" onSelect={onLanguageChange}>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
+          <NavDropdown
+            title={intl.formatMessage({ id: 'navigation.language' })}
+            id="basic-nav-dropdown"
+            clicked=""
+          >
+            <NavDropdown.Item eventKey="en">English</NavDropdown.Item>
+            <NavDropdown.Item eventKey="it">Italiano</NavDropdown.Item>
+            <NavDropdown.Item eventKey="sv">Svenska</NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link href="#home">
+            {intl.formatMessage({ id: 'navigation.recipeList' })}
+          </Nav.Link>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl
+            type="text"
+            placeholder={intl.formatMessage({ id: 'navigation.search' })}
+            className="mr-sm-2"
+          />
           <Button variant="outline-success">
             {intl.formatMessage({ id: 'navigation.search' })}
           </Button>

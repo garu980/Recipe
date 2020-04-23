@@ -5,7 +5,7 @@ import Navigation from './navigation/navigation';
 import configureStore from './configureStore';
 import { Provider, useSelector } from 'react-redux';
 import { IntlProvider } from 'react-intl';
-import { localization } from './localization';
+import { localization } from './crosscuttingconcerns/localization';
 
 const store = configureStore();
 
