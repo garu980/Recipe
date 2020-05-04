@@ -6,7 +6,7 @@ export default function config() {
     keyVaultUri: isDevelopment()
       ? configuration.keyVaultUri
       : process.env.APPSETTING_KeyVaultUrl,
-    betApiKeySecret: isDevelopment()
+    redirectUri: isDevelopment()
       ? configuration.redirectUri
       : process.env.APPSETTING_RedirectUri,
     betApiRegions: isDevelopment()

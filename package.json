@@ -9,7 +9,8 @@
     "start-node": "node transpiled/index.js",
     "build-server": "babel ./src --out-dir dist && webpack --mode production",
     "webpack": "webpack --mode production",
-    "test": "jest --config=jest.config.js"
+    "test": "jest --config=jest.config.js",
+    "stop-server": "pm2 stop all"
   },
   "repository": {
     "type": "git",

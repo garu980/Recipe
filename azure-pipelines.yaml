@@ -9,11 +9,11 @@ steps:
       verbose: false
 
   - task: Npm@1
-    displayName: 'npm build'
+    displayName: 'npm build-server'
     inputs:
       command: custom
       verbose: false
-      customCommand: 'run build'
+      customCommand: 'run build-server'
 
   - task: Npm@1
     displayName: 'npm test'
