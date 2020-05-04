@@ -1,52 +1,50 @@
 pool:
-    name: Hosted VS2017
-    demands: npm
-  
-  steps:
+  name: Hosted VS2017
+  demands: npm
+
+steps:
   - task: Npm@1
     displayName: 'npm install'
     inputs:
       verbose: false
-  
+
   - task: Npm@1
     displayName: 'npm build'
     inputs:
       command: custom
       verbose: false
       customCommand: 'run build'
-  
+
   - task: Npm@1
     displayName: 'npm test'
     inputs:
       command: custom
       verbose: false
       customCommand: 'run test'
-  
+
   - powershell: |
-     Compress-Archive -Path $(Build.SourcesDirectory)/dist -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
-     Compress-Archive -Path $(Build.SourcesDirectory)/package.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
-     Compress-Archive -Path $(Build.SourcesDirectory)/package-lock.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
-     Compress-Archive -Path $(Build.SourcesDirectory)/.babelrc -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
-     Compress-Archive -Path $(Build.SourcesDirectory)/config.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
-     Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-     
+      Compress-Archive -Path $(Build.SourcesDirectory)/dist -DestinationPath $(Build.SourcesDirectory)/release.zip
+
+      Compress-Archive -Path $(Build.SourcesDirectory)/package.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+
+      Compress-Archive -Path $(Build.SourcesDirectory)/package-lock.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+
+      Compress-Archive -Path $(Build.SourcesDirectory)/.babelrc -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+
+      Compress-Archive -Path $(Build.SourcesDirectory)/config.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+
+      Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+
     displayName: 'PowerShell Script'
-  
+
   - task: CopyFiles@2
     displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
     inputs:
       Contents: |
-       release.zip
-       **\provision\**
-       
+        release.zip
+        **\provision\**
+
       TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  
+
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
-  
-  
