@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "AppServiceName": {
-      "value": "recipe"
+      "value": "donsby-recipes"
     },
     "ApplicationName": {
-      "value": "recipe"
+      "value": "donsby-recipes"
     },
     "ApplicationVersion": {
       "value": "1.0"
@@ -15,10 +15,10 @@
       "value": "production"
     },
     "ServicePlanName": {
-      "value": "SureBets"
+      "value": "RecipeServicePlan"
     },
     "ServiceplanResourceGroupName": {
-      "value": "SureBet"
+      "value": "Recipe"
     },
     "MinimumLogLevel": {
       "value": "Information"
@@ -27,6 +27,9 @@
       "value": "prod"
     },
     "KeyVaultUrl": {
+      "value": "https://sure-bet-ops.vault.azure.net"
+    },
+    "RedirectUri": {
       "value": "https://sure-bet-ops.vault.azure.net"
     }
   }

@@ -55,6 +55,9 @@
     },
     "KeyVaultUrl": {
       "type": "string"
+    },
+    "RedirectUri": {
+      "type": "string"
     }
   },
   "variables": {
@@ -96,6 +99,7 @@
             "ApplicationName": "[parameters('ApplicationName')]",
             "ApplicationVersion": "[parameters('ApplicationVersion')]",
             "KeyVaultUrl": "[parameters('KeyVaultUrl')]",
+            "RedirectUri": "[parameters('RedirectUri')]",
             "WEBSITE_NODE_DEFAULT_VERSION": "10.14.1"
           }
         }
