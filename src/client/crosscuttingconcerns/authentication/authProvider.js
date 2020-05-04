@@ -1,6 +1,7 @@
 // authProvider.js
 import { MsalAuthProvider, LoginType } from 'react-aad-msal';
 import regeneratorRuntime from 'regenerator-runtime';
+import configuration from '../configuration/configuration';
 
 // Msal Configurations
 const config = {
@@ -8,7 +9,7 @@ const config = {
     authority:
       'https://luarlimeb2c.b2clogin.com/luarlimeb2c.onmicrosoft.com/B2C_1_recipe_signup',
     clientId: 'fcc45692-608c-4eec-90c2-24371186c90a',
-    redirectUri: 'http://localhost:3000',
+    redirectUri: configuration().redirectUri,
     validateAuthority: false,
   },
   cache: {

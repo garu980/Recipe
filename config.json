@@ -1,0 +1,8 @@
+{
+    "isDevelopment": "true",
+    "redirectUri": "http://localhost:3000",
+    "keyVaultUrl": "https://sure-bet-ops.vault.azure.net",
+    "betApiKeySecret": "betApiKeySecret",
+    "betApiRegions": "https://api.the-odds-api.com/v3/sports/?apiKey=",
+    "betApiMatches": "https://api.the-odds-api.com/v3/odds?region=uk&mkt=h2h&apiKey="
+}
