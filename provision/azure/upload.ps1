@@ -1,14 +1,14 @@
 Param(
-    [Parameter(Mandatory=$True,Position=2)]
+    [Parameter(Mandatory = $True, Position = 2)]
     [string]$resourceGroup,
-    [Parameter(Mandatory=$True,Position=1)]
+    [Parameter(Mandatory = $True, Position = 1)]
     [string]$appName    
 )
 Write-Host "Running the script"
 $vstsWorkDir = $env:SYSTEM_DEFAULTWORKINGDIRECTORY
 $vstsReleaseDefName = $env:RELEASE_DEFINITIONNAME
 
-$artifactDir = "$($env:SYSTEM_DEFAULTWORKINGDIRECTORY)/SureBets-Release/drop"
+$artifactDir = "$($env:SYSTEM_DEFAULTWORKINGDIRECTORY)/Recipe release/drop"
 $zip = Get-ChildItem -Path $artifactDir -Filter *.zip | Select-Object -First 1    
 $zipPath = "$artifactDir/$($zip.Name)"
 Write-Host "Deploying $zip"
@@ -20,7 +20,7 @@ Write-Host "Successfully deployed, now warming up and running health checks"
 
 #get the credentials for running the command
 $user = az webapp deployment list-publishing-profiles -n $appName -g $resourceGroup `
---query "[?publishMethod=='MSDeploy'].userName" -o tsv
+    --query "[?publishMethod=='MSDeploy'].userName" -o tsv
 
 $pass = az webapp deployment list-publishing-profiles -n $appName -g $resourceGroup `
     --query "[?publishMethod=='MSDeploy'].userPWD" -o tsv
@@ -37,10 +37,10 @@ $commandBody = @{
 
 Invoke-RestMethod -Uri $apiUrl -Headers $headers -Method POST -ContentType "application/json" -Body (ConvertTo-Json $commandBody) | Out-Null 
 
-$response = try{ Invoke-WebRequest -Uri "https://$appName.azurewebsites.net/api/v1/get/health" -Method GET } catch { $_.Exception.Response}
+$response = try { Invoke-WebRequest -Uri "https://$appName.azurewebsites.net/api/v1/get/health" -Method GET } catch { $_.Exception.Response }
 $statusCode = [int]$response.StatusCode
 
-if($statusCode -ne 200){
+if ($statusCode -ne 200) {
     $result = $response.GetResponseStream()
     $reader = New-Object System.IO.StreamReader($result)
     $reader.BaseStream.Position = 0
