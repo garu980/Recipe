@@ -137,8 +137,7 @@
           "httpLoggingEnabled": true,
           "detailedErrorLogginEnabled": true,
           "ftpsState": "Disabled",
-          "linuxFxVersion": "NODE|10.14",
-          "appCommandLine": "npm run start"
+          "appCommandLine": "npm run start-server"
         },
         "httpsOnly": true
       },
