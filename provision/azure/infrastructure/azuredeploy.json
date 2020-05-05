@@ -137,7 +137,7 @@
           "httpLoggingEnabled": true,
           "detailedErrorLogginEnabled": true,
           "ftpsState": "Disabled",
-          "appCommandLine": "npm run start-server"
+          "appCommandLine": "npm run start-prod"
         },
         "httpsOnly": true
       },

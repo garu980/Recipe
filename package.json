@@ -10,7 +10,8 @@
     "build-server": "babel ./src --out-dir dist && webpack --mode production",
     "webpack": "webpack --mode production",
     "test": "jest --config=jest.config.js",
-    "stop-server": "pm2 stop all"
+    "stop-server": "pm2 stop all",
+    "start-prod": "node dist/server/server.js"
   },
   "repository": {
     "type": "git",
