@@ -30,7 +30,7 @@
       "value": "https://sure-bet-ops.vault.azure.net"
     },
     "RedirectUri": {
-      "value": "https://sure-bet-ops.vault.azure.net"
+      "value": "https://donsby-recipes.azurewebsites.net"
     }
   }
 }
