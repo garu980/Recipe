@@ -30,8 +30,6 @@ steps:
       Compress-Archive -Path $(Build.SourcesDirectory)/package-lock.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
       Compress-Archive -Path $(Build.SourcesDirectory)/config.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
       Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-      Compress-Archive -Path $(Build.SourcesDirectory)/.deployment -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-      Compress-Archive -Path $(Build.SourcesDirectory)/deploy.cmd -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
 
     displayName: 'PowerShell Script'
 
