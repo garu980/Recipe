@@ -24,14 +24,12 @@ steps:
 
   - powershell: |
       Compress-Archive -Path $(Build.SourcesDirectory)/dist -DestinationPath $(Build.SourcesDirectory)/release.zip
-
       Compress-Archive -Path $(Build.SourcesDirectory)/package.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-
       Compress-Archive -Path $(Build.SourcesDirectory)/package-lock.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-
       Compress-Archive -Path $(Build.SourcesDirectory)/config.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
-
       Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
+      Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/.deployment
+      Compress-Archive -Path $(Build.SourcesDirectory)/web.config -Update -DestinationPath $(Build.SourcesDirectory)/start.cmd
 
     displayName: 'PowerShell Script'
 
