@@ -8,7 +8,8 @@ export default function config() {
       : process.env.APPSETTING_KeyVaultUrl,
     redirectUri: isDevelopment()
       ? configuration.redirectUri
-      : process.env.APPSETTING_RedirectUri,
+      : //TODO: need to fetch this from the server
+        'https://donsby-recipes.azurewebsites.net/',
     betApiRegions: isDevelopment()
       ? configuration.betApiRegions
       : process.env.APPSETTING_BetApiRegions,
