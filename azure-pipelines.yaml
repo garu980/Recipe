@@ -23,7 +23,7 @@ steps:
       customCommand: 'run test'
 
   - powershell: |
-      Copy $(Build.SourcesDirectory)/views $(Build.SourcesDirectory)/dist/server/views
+      Copy $(Build.SourcesDirectory)/views $(Build.SourcesDirectory)/dist/server/views -Recurse
       Compress-Archive -Path $(Build.SourcesDirectory)/dist -DestinationPath $(Build.SourcesDirectory)/release.zip
       Compress-Archive -Path $(Build.SourcesDirectory)/public -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
       Compress-Archive -Path $(Build.SourcesDirectory)/package.json -Update -DestinationPath $(Build.SourcesDirectory)/release.zip
