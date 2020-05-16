@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 require("@babel/polyfill");
 
-var _tableStorage = _interopRequireDefault(require("../services/tableStorage"));
+var _recipeRepository = _interopRequireDefault(require("../repositories/recipeRepository"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -64,7 +64,7 @@ var RecipeController = /*#__PURE__*/function () {
                 _context2.prev = 0;
                 _context2.t0 = JSON;
                 _context2.next = 4;
-                return (0, _tableStorage["default"])();
+                return (0, _recipeRepository["default"])();
 
               case 4:
                 _context2.t1 = _context2.sent;

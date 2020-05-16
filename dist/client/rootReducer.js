@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _redux = require("redux");
 
-var _languageReducer = _interopRequireDefault(require("../client/navigation/state/languageReducer"));
+var _languageReducer = _interopRequireDefault(require("../client/presentation/navigation/state/languageReducer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

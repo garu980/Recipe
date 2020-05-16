@@ -15,7 +15,7 @@ const RecipeList = (props) => {
   const intl = useIntl();
   return (
     <div className="recipe">
-      <Form inline>
+      <Form inline className="recipe-form">
         <FormControl
           type="text"
           placeholder={intl.formatMessage({ id: 'recipeList.searchRecipe' })}
