@@ -13,9 +13,8 @@ function config() {
   return {
     isDevelopment: isDevelopment(),
     keyVaultUri: isDevelopment() ? _config["default"].keyVaultUri : process.env.APPSETTING_KeyVaultUrl,
-    betApiKeySecret: isDevelopment() ? _config["default"].betApiKeySecret : process.env.APPSETTING_BetApiKeySecret,
-    betApiRegions: isDevelopment() ? _config["default"].betApiRegions : process.env.APPSETTING_BetApiRegions,
-    betApiMatches: isDevelopment() ? _config["default"].betApiMatches : process.env.APPSETTING_BetApiMatches
+    storageAccountKeySecret: isDevelopment() ? _config["default"].storageAccountKeySecret : process.env.APPSETTING_StorageAccountKeySecret,
+    storageAccountName: isDevelopment() ? _config["default"].storageAccountName : process.env.APPSETTING_StorageAccountName
   };
 }
 

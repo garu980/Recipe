@@ -1,5 +1,5 @@
 import * as types from './languageActionsTypes';
-import initialState from '../../initialState';
+import initialState from '../../../initialState';
 
 export default function languageReducer(state = initialState.language, action) {
   switch (action.type) {

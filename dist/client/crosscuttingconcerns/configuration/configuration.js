@@ -12,10 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 function config() {
   return {
     isDevelopment: isDevelopment(),
-    keyVaultUri: isDevelopment() ? _config["default"].keyVaultUri : process.env.APPSETTING_KeyVaultUrl,
-    redirectUri: isDevelopment() ? _config["default"].redirectUri : process.env.APPSETTING_RedirectUri,
-    betApiRegions: isDevelopment() ? _config["default"].betApiRegions : process.env.APPSETTING_BetApiRegions,
-    betApiMatches: isDevelopment() ? _config["default"].betApiMatches : process.env.APPSETTING_BetApiMatches
+    redirectUri: isDevelopment() ? _config["default"].redirectUri : //TODO: need to fetch this from the server
+    'https://donsby-recipes.azurewebsites.net/'
   };
 }
 

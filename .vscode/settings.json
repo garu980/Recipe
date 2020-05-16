@@ -1,0 +1,22 @@
+{
+    "FSharp.suggestSdkScripts": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#9aa8df",
+        "activityBar.activeBorder": "#c23d58",
+        "activityBar.background": "#9aa8df",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#c23d58",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#7387d3",
+        "statusBar.border": "#7387d3",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#4c66c7",
+        "titleBar.activeBackground": "#7387d3",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.border": "#7387d3",
+        "titleBar.inactiveBackground": "#7387d399",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#7387d3"
+}

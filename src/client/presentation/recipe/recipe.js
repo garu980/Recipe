@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Recipe = props => {
+const Recipe = (props) => {
   return <h2>RECIPE HERE CHANGED</h2>;
 };
 

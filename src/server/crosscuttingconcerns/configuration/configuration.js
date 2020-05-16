@@ -6,15 +6,12 @@ export default function config() {
     keyVaultUri: isDevelopment()
       ? configuration.keyVaultUri
       : process.env.APPSETTING_KeyVaultUrl,
-    betApiKeySecret: isDevelopment()
-      ? configuration.betApiKeySecret
-      : process.env.APPSETTING_BetApiKeySecret,
-    betApiRegions: isDevelopment()
-      ? configuration.betApiRegions
-      : process.env.APPSETTING_BetApiRegions,
-    betApiMatches: isDevelopment()
-      ? configuration.betApiMatches
-      : process.env.APPSETTING_BetApiMatches,
+    storageAccountKeySecret: isDevelopment()
+      ? configuration.storageAccountKeySecret
+      : process.env.APPSETTING_StorageAccountKeySecret,
+    storageAccountName: isDevelopment()
+      ? configuration.storageAccountName
+      : process.env.APPSETTING_StorageAccountName,
   };
 }
 

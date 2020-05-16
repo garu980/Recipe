@@ -36,7 +36,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/client/index.html',
-      favicon: 'src/client/favicon.ico',
+      favicon: 'src/client/assets/favicon.ico',
     }),
   ],
   module: {
@@ -49,6 +49,10 @@ module.exports = {
       {
         test: /(\.css)$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: 'file-loader?name=./assets/images/[name].[ext]',
       },
     ],
   },
