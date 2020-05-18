@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import * as NavigationActions from '../../../client/navigation/state/languageActions';
+import * as NavigationActions from '../../../client/presentation/navigation/state/languageActions';
 import rootReducer from '../../../client/rootReducer';
 
 const initialState = {

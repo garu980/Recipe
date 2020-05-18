@@ -15,5 +15,6 @@ var router = _express["default"].Router();
 
 router.get('/api/v1/get/health', _recipeController["default"].health);
 router.get('/api/v1/get/recipes', _recipeController["default"].getListOfRecipes);
+router.get('/api/v1/post/recipe', _recipeController["default"].createRecipe);
 var _default = router;
 exports["default"] = _default;

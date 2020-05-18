@@ -2,7 +2,9 @@ import * as azure from 'azure-storage';
 import configuration from '../crosscuttingconcerns/configuration/configuration';
 import getValueOfKeyFromKeyVault from '../crosscuttingconcerns/keyvault/keyvault';
 
-export default async function getRecipes() {
+export async function saveRecipe(recipe) {}
+
+export async function getRecipes() {
   let storageAccountKeySecret = await getValueOfKeyFromKeyVault(
     configuration().storageAccountKeySecret
   );
