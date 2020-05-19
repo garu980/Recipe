@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Navbar,
-  Nav,
-  Form,
-  NavDropdown,
-  FormControl,
-  Button,
-} from 'react-bootstrap';
+import { Form, FormControl, Button } from 'react-bootstrap';
 import { useIntl } from 'react-intl';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/recipeList.module.css';

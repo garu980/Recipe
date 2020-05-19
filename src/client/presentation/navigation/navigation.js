@@ -34,8 +34,8 @@ const Navigation = (props) => {
             <NavDropdown.Item eventKey="it">Italiano</NavDropdown.Item>
             <NavDropdown.Item eventKey="sv">Svenska</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#home">
-            {intl.formatMessage({ id: 'navigation.recipeList' })}
+          <Nav.Link href="/createRecipe">
+            {intl.formatMessage({ id: 'navigation.createRecipe' })}
           </Nav.Link>
         </Nav>
         <Form inline>

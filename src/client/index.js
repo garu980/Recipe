@@ -10,6 +10,7 @@ import { localization } from './crosscuttingconcerns/localization';
 import { authProvider } from './crosscuttingconcerns/authentication/authProvider';
 import { AzureAD } from 'react-aad-msal';
 import { BrowserRouter, Route } from 'react-router-dom';
+import CreateRecipe from './presentation/createRecipe/createRecipe';
 
 const store = configureStore();
 
@@ -22,6 +23,7 @@ const App = () => {
       <BrowserRouter>
         <Route path="/" exact component={RecipeList} />
         <Route path="/recipe/:id" component={Recipe} />
+        <Route path="/createRecipe" component={CreateRecipe} />
       </BrowserRouter>
     </IntlProvider>
   );
