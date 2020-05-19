@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 var _redux = require("redux");
 
-var NavigationActions = _interopRequireWildcard(require("../../../client/navigation/state/languageActions"));
+var NavigationActions = _interopRequireWildcard(require("../../../client/presentation/navigation/state/languageActions"));
 
 var _rootReducer = _interopRequireDefault(require("../../../client/rootReducer"));
 

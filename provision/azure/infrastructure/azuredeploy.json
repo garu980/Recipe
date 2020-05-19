@@ -17,7 +17,7 @@
     "AppServiceName": {
       "type": "string",
       "allowedValues": [
-        "donsby-recipes"
+        "bydons-recipes"
       ]
     },
     "ServicePlanName": {

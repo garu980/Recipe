@@ -24,6 +24,8 @@ var _reactAadMsal = require("react-aad-msal");
 
 var _reactRouterDom = require("react-router-dom");
 
+var _createRecipe = _interopRequireDefault(require("./presentation/createRecipe/createRecipe"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var store = (0, _configureStore["default"])();
@@ -42,6 +44,9 @@ var App = function App() {
   }), /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, {
     path: "/recipe/:id",
     component: _Recipe["default"]
+  }), /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Route, {
+    path: "/createRecipe",
+    component: _createRecipe["default"]
   })));
 };
 

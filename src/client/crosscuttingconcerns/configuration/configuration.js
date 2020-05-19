@@ -6,7 +6,7 @@ export default function config() {
     redirectUri: isDevelopment()
       ? configuration.redirectUri
       : //TODO: need to fetch this from the server
-        'https://donsby-recipes.azurewebsites.net/',
+        'https://bydons-recipes.azurewebsites.net/',
   };
 }
 

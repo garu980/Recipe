@@ -6,7 +6,7 @@ var _enzyme = require("enzyme");
 
 var React = _interopRequireWildcard(require("react"));
 
-var _navigation = _interopRequireDefault(require("../../../client/navigation/navigation"));
+var _navigation = _interopRequireDefault(require("../../../client/presentation/navigation/navigation"));
 
 var Redux = _interopRequireWildcard(require("react-redux"));
 
