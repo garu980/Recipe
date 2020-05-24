@@ -1,3 +1,16 @@
 export const createRecipe = {
   'createRecipe.title': 'Titolo',
+  'createRecipe.apetizer': 'Antipasto',
+  'createRecipe.bread': 'Pane',
+  'createRecipe.firstCourse': 'Primo',
+  'createRecipe.secondCourse': 'Secondo',
+  'createRecipe.salad': 'Insalata',
+  'createRecipe.sideDish': 'Contorno',
+  'createRecipe.snack': 'Snack',
+  'createRecipe.dessert': 'Dolce',
+  'createRecipe.soup': 'Zuppa',
+  'createRecipe.sauce': 'Salsa',
+  'createRecipe.category': 'Categoria',
+  'createRecipe.save': 'Salva',
+  'createRecipe.saving': 'Salvando...',
 };

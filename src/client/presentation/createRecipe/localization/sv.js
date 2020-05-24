@@ -1,3 +1,16 @@
 export const createRecipe = {
   'createRecipe.title': 'Titel',
+  'createRecipe.apetizer': 'Förrätt',
+  'createRecipe.bread': 'Bröd',
+  'createRecipe.firstCourse': 'Först',
+  'createRecipe.secondCourse': 'Andra',
+  'createRecipe.salad': 'Sallad',
+  'createRecipe.sideDish': 'Sidorätt',
+  'createRecipe.snack': 'Snack',
+  'createRecipe.dessert': 'Efterrätt',
+  'createRecipe.soup': 'Soppa',
+  'createRecipe.sauce': 'Sås',
+  'createRecipe.category': 'Kategori',
+  'createRecipe.save': 'Spara',
+  'createRecipe.saving': 'Sparar...',
 };
