@@ -1,5 +1,6 @@
 export const createRecipe = {
-  'createRecipe.title': 'Title',
+  'createRecipe.name': 'Name',
+  'createRecipe.title': 'Create Recipe',
   'createRecipe.apetizer': 'Apetizer',
   'createRecipe.bread': 'Bread',
   'createRecipe.firstCourse': 'First Course',
@@ -13,4 +14,13 @@ export const createRecipe = {
   'createRecipe.category': 'Category',
   'createRecipe.save': 'Save',
   'createRecipe.saving': 'Saving',
+  'createRecipe.notSelected': 'Not Selected',
+  'createRecipe.categoryRequired': 'The category is required',
+  'createRecipe.nameRequired': 'The name is required',
+  'createRecipe.numberOfServings': 'Number of servings',
+  'createRecipe.cookingTime': 'Cooking time',
+  'createRecipe.preparationTime': 'Preparation time',
+  'createRecipe.preparationTimeRequired': 'The preparation time is required',
+  'createRecipe.cookingTimeRequired': 'The cooking time is required',
+  'createRecipe.numberOfServingsRequired': 'The number of servings is required',
 };

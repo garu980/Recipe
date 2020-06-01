@@ -1,5 +1,6 @@
 export const createRecipe = {
-  'createRecipe.title': 'Titel',
+  'createRecipe.name': 'Namn',
+  'createRecipe.title': 'Skapa Recept',
   'createRecipe.apetizer': 'Förrätt',
   'createRecipe.bread': 'Bröd',
   'createRecipe.firstCourse': 'Först',
@@ -13,4 +14,13 @@ export const createRecipe = {
   'createRecipe.category': 'Kategori',
   'createRecipe.save': 'Spara',
   'createRecipe.saving': 'Sparar...',
+  'createRecipe.notSelected': 'Ej vald',
+  'createRecipe.categoryRequired': 'Kategori måste väljas',
+  'createRecipe.nameRequired': 'Namn måste sättas',
+  'createRecipe.numberOfServings': 'Antal portioner',
+  'createRecipe.cookingTime': 'Tillagningstid',
+  'createRecipe.preparationTime': 'Förberedelsetid',
+  'createRecipe.preparationTimeRequired': 'Tillagningstiden måste sättas',
+  'createRecipe.cookingTimeRequired': 'Förberedelsetiden måste sättas',
+  'createRecipe.numberOfServingsRequired': 'Antal portionerna måste sättas',
 };

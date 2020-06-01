@@ -1,5 +1,6 @@
 export const createRecipe = {
-  'createRecipe.title': 'Titolo',
+  'createRecipe.name': 'Nome',
+  'createRecipe.title': 'Crea Ricetta',
   'createRecipe.apetizer': 'Antipasto',
   'createRecipe.bread': 'Pane',
   'createRecipe.firstCourse': 'Primo',
@@ -13,4 +14,15 @@ export const createRecipe = {
   'createRecipe.category': 'Categoria',
   'createRecipe.save': 'Salva',
   'createRecipe.saving': 'Salvando...',
+  'createRecipe.notSelected': 'Nessuna',
+  'createRecipe.categoryRequired': 'La categoria deve essere selezionata',
+  'createRecipe.nameRequired': 'La ricetta deve avere un nome',
+  'createRecipe.numberOfServings': 'Numero di porzioni',
+  'createRecipe.cookingTime': 'Tempo di cottura',
+  'createRecipe.preparationTime': 'Tempo di preparazione',
+  'createRecipe.preparationTimeRequired':
+    'Il tempo di preparazione dve essere inserito',
+  'createRecipe.cookingTimeRequired': 'Il tempo di cottura dve essere inserito',
+  'createRecipe.numberOfServingsRequired':
+    'Il numero di porzioni dve essere inserito',
 };
