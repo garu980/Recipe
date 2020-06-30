@@ -25,4 +25,8 @@ export const createRecipe = {
   'createRecipe.cookingTimeRequired': 'Il tempo di cottura dve essere inserito',
   'createRecipe.numberOfServingsRequired':
     'Il numero di porzioni dve essere inserito',
+  'createRecipe.cancel': 'Annulla',
+  'createRecipe.addIngredient': 'Aggiungi Ingrediente',
+  'createRecipe.add': 'Aggiungi',
+  'createRecipe.close': 'Chiudi',
 };

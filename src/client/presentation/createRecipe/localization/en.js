@@ -23,4 +23,8 @@ export const createRecipe = {
   'createRecipe.preparationTimeRequired': 'The preparation time is required',
   'createRecipe.cookingTimeRequired': 'The cooking time is required',
   'createRecipe.numberOfServingsRequired': 'The number of servings is required',
+  'createRecipe.cancel': 'Cancel',
+  'createRecipe.addIngredient': 'Add Ingredient',
+  'createRecipe.add': 'Add',
+  'createRecipe.close': 'Close',
 };

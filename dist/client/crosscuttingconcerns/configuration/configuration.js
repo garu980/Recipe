@@ -13,7 +13,7 @@ function config() {
   return {
     isDevelopment: isDevelopment(),
     redirectUri: isDevelopment() ? _config["default"].redirectUri : //TODO: need to fetch this from the server
-    'https://bydons-recipes.azurewebsites.net/'
+    'https://donsby-recipes.azurewebsites.net/'
   };
 }
 

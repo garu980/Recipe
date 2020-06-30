@@ -1,6 +1,6 @@
 {
-    "isDevelopment": "false",
-    "redirectUri": "http://localhost:3000",
+    "isDevelopment": "true",
+    "redirectUri": "http://localhost:3001",
     "keyVaultUrl": "https://recipe-keyvault.vault.azure.net/",
     "storageAccountName": "donsbyrecipestorage",
     "storageAccountKeySecret": "storageAccountKeySecret"

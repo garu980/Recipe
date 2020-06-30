@@ -5,6 +5,8 @@ import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
 import RecipeCategory from '../common/recipeCategory';
 import RecipeImageUploader from '../common/RecipeImageUploader';
+import CreateStep from './createStep';
+import AddIngredient from './AddIngredient';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/createRecipe.module.css';
 
@@ -71,7 +73,7 @@ const CreateRecipe = (props) => {
   return (
     <div className="form-group create-recipe">
       <form onSubmit={onSave}>
-        <h2 class="text-center">
+        <h2 className="text-center">
           {intl.formatMessage({ id: 'createRecipe.title' })}
         </h2>
         {/* {errors.onSave && (
@@ -79,13 +81,13 @@ const CreateRecipe = (props) => {
           {errors.onSave}
         </div>
       )} */}
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="col-sm-12">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="col-sm-12">
               <RecipeImageUploader />
             </div>
-            <div class="row">
-              <div class="col-sm-4">
+            <div className="row">
+              <div className="col-sm-4">
                 <TextInput
                   name="preparationTime"
                   label={intl.formatMessage({
@@ -96,7 +98,7 @@ const CreateRecipe = (props) => {
                   error={errors.preparationTime}
                 />
               </div>
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <TextInput
                   name="cookingTime"
                   label={intl.formatMessage({ id: 'createRecipe.cookingTime' })}
@@ -105,7 +107,7 @@ const CreateRecipe = (props) => {
                   error={errors.cookingTime}
                 />
               </div>
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <TextInput
                   name="numberOfServings"
                   label={intl.formatMessage({
@@ -119,8 +121,8 @@ const CreateRecipe = (props) => {
             </div>
           </div>
 
-          <div class="col-sm-6">
-            <div class="col-sm-12">
+          <div className="col-sm-6">
+            <div className="col-sm-12">
               <TextInput
                 name="name"
                 label={intl.formatMessage({ id: 'createRecipe.name' })}
@@ -129,8 +131,7 @@ const CreateRecipe = (props) => {
                 error={errors.name}
               />
             </div>
-
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <SelectInput
                 name="category"
                 label={intl.formatMessage({ id: 'createRecipe.category' })}
@@ -144,8 +145,30 @@ const CreateRecipe = (props) => {
               />
             </div>
           </div>
+
+          <div className="col-sm-6">
+            <div className="col-sm-9">
+              <TextInput
+                name="addIngredient"
+                label={intl.formatMessage({ id: 'createRecipe.addIngredient' })}
+                value={recipe.name}
+                onChange={onChange}
+                error={errors.name}
+              />
+            </div>
+            <div className="col-sm-3">
+              <AddIngredient />
+            </div>
+          </div>
         </div>
 
+        <button
+          type="submit"
+          disabled={false}
+          className="btn btn-primary save-button"
+        >
+          {intl.formatMessage({ id: 'createRecipe.cancel' })}
+        </button>
         <button
           type="submit"
           disabled={false}

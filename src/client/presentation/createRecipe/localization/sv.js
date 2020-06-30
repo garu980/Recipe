@@ -23,4 +23,8 @@ export const createRecipe = {
   'createRecipe.preparationTimeRequired': 'Tillagningstiden måste sättas',
   'createRecipe.cookingTimeRequired': 'Förberedelsetiden måste sättas',
   'createRecipe.numberOfServingsRequired': 'Antal portionerna måste sättas',
+  'createRecipe.cancel': 'Avbryt',
+  'createRecipe.addIngredient': 'Tillägg en ingredient',
+  'createRecipe.add': 'Tillägg',
+  'createRecipe.close': 'Stäng',
 };
