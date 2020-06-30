@@ -82,82 +82,87 @@ const CreateRecipe = (props) => {
         </div>
       )} */}
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-3">
             <div className="col-sm-12">
               <RecipeImageUploader />
             </div>
-            <div className="row">
-              <div className="col-sm-4">
-                <TextInput
-                  name="preparationTime"
-                  label={intl.formatMessage({
-                    id: 'createRecipe.preparationTime',
-                  })}
-                  value={recipe.preparationTime}
-                  onChange={onChange}
-                  error={errors.preparationTime}
-                />
-              </div>
-              <div className="col-sm-4">
-                <TextInput
-                  name="cookingTime"
-                  label={intl.formatMessage({ id: 'createRecipe.cookingTime' })}
-                  value={recipe.cookingTime}
-                  onChange={onChange}
-                  error={errors.cookingTime}
-                />
-              </div>
-              <div className="col-sm-4">
-                <TextInput
-                  name="numberOfServings"
-                  label={intl.formatMessage({
-                    id: 'createRecipe.numberOfServings',
-                  })}
-                  value={recipe.numberOfServings}
-                  onChange={onChange}
-                  error={errors.numberOfServings}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6">
-            <div className="col-sm-12">
-              <TextInput
-                name="name"
-                label={intl.formatMessage({ id: 'createRecipe.name' })}
-                value={recipe.name}
-                onChange={onChange}
-                error={errors.name}
-              />
-            </div>
-            <div className="col-sm-12">
-              <SelectInput
-                name="category"
-                label={intl.formatMessage({ id: 'createRecipe.category' })}
-                value={recipe.category}
-                defaultOption={intl.formatMessage({
-                  id: 'createRecipe.notSelected',
-                })}
-                options={getCategoryOptions()}
-                onChange={onChange}
-                error={errors.category}
-              />
-            </div>
-          </div>
-
-          <div className="col-sm-6">
             <div className="col-sm-9">
               <TextInput
-                name="addIngredient"
-                label={intl.formatMessage({ id: 'createRecipe.addIngredient' })}
-                value={recipe.name}
+                name="preparationTime"
+                label={intl.formatMessage({
+                  id: 'createRecipe.preparationTime',
+                })}
+                value={recipe.preparationTime}
                 onChange={onChange}
-                error={errors.name}
+                error={errors.preparationTime}
               />
             </div>
-            <div className="col-sm-3">
-              <AddIngredient />
+            <div className="col-sm-9">
+              <TextInput
+                name="cookingTime"
+                label={intl.formatMessage({ id: 'createRecipe.cookingTime' })}
+                value={recipe.cookingTime}
+                onChange={onChange}
+                error={errors.cookingTime}
+              />
+            </div>
+            <div className="col-sm-9">
+              <TextInput
+                name="numberOfServings"
+                label={intl.formatMessage({
+                  id: 'createRecipe.numberOfServings',
+                })}
+                value={recipe.numberOfServings}
+                onChange={onChange}
+                error={errors.numberOfServings}
+              />
+            </div>
+          </div>
+
+          <div className="col-sm-9">
+            <div className="row">
+              <div className="col-sm-12">
+                <TextInput
+                  name="name"
+                  label={intl.formatMessage({ id: 'createRecipe.name' })}
+                  value={recipe.name}
+                  onChange={onChange}
+                  error={errors.name}
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-sm-12">
+                <SelectInput
+                  name="category"
+                  label={intl.formatMessage({ id: 'createRecipe.category' })}
+                  value={recipe.category}
+                  defaultOption={intl.formatMessage({
+                    id: 'createRecipe.notSelected',
+                  })}
+                  options={getCategoryOptions()}
+                  onChange={onChange}
+                  error={errors.category}
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-sm-11">
+                <TextInput
+                  name="addIngredient"
+                  label={intl.formatMessage({
+                    id: 'createRecipe.addIngredient',
+                  })}
+                  value={recipe.name}
+                  onChange={onChange}
+                  error={errors.name}
+                />
+              </div>
+              <div className="col-sm-1 add-ingredient">
+                <AddIngredient />
+              </div>
             </div>
           </div>
         </div>
