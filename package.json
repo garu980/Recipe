@@ -37,7 +37,7 @@
     "@azure/storage-blob": "^12.1.1",
     "@babel/runtime": "^7.9.2",
     "@kdpw/msal-b2c-react": "0.0.3",
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "azure-keyvault": "^3.0.5",
     "azure-storage": "^2.10.3",
     "bootstrap": "^4.4.1",
